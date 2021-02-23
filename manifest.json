@@ -1,0 +1,35 @@
+{
+  "name": "Zhaket Cal",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "web_accessible_resources": ["badge.png","css/template.css","fonts/vazir/*"],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "icons": {
+    "16": "badge.png",
+    "48": "badge.png",
+    "128": "badge.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.zhaket.com/dashboard*"
+      ],
+      "js": [
+        "js/html.js",
+        "js/functions.js",
+        "js/main.js"
+      ],
+      "css": [
+        "css/main.css"
+      ]
+    }
+  ]
+}
